@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+:root {
+    font-family: "Nunito", "Segoe UI", sans-serif;
+    color: #ededed;
+    background: #0d0e10;
+    font-synthesis: none;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    --bg: #0d0e10;
+    --surface: #131416;
+    --surface-soft: #18191c;
+    --line: #27292d;
+    --line-soft: #202226;
+    --text: #ededed;
+    --muted: #8c8f94;
+    --accent: #e5e5e5;
+    --danger: #d76f6f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background: var(--bg);
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    color: inherit;
+}
