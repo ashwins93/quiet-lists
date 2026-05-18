@@ -17,3 +17,5 @@ export function GetTodos(arg1:number):Promise<Array<main.Todo>>;
 export function RenameList(arg1:number,arg2:string):Promise<main.List>;
 
 export function SetTodoCompleted(arg1:number,arg2:boolean):Promise<main.Todo>;
+
+export function UpdateTodoTitle(arg1:number,arg2:string):Promise<main.Todo>;

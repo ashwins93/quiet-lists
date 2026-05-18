@@ -300,6 +300,20 @@ func (a *App) CreateTodo(listID int64, title string) (Todo, error) {
 	return a.getTodo(id)
 }
 
+func (a *App) UpdateTodoTitle(id int64, title string) (Todo, error) {
+	if err := a.ready(); err != nil {
+		return Todo{}, err
+	}
+	title, err := cleanTitle(title)
+	if err != nil {
+		return Todo{}, err
+	}
+	if _, err := a.db.Exec(`UPDATE todos SET title = ? WHERE id = ?`, title, id); err != nil {
+		return Todo{}, err
+	}
+	return a.getTodo(id)
+}
+
 func (a *App) SetTodoCompleted(id int64, completed bool) (Todo, error) {
 	if err := a.ready(); err != nil {
 		return Todo{}, err

@@ -33,3 +33,7 @@ export function RenameList(arg1, arg2) {
 export function SetTodoCompleted(arg1, arg2) {
   return window['go']['main']['App']['SetTodoCompleted'](arg1, arg2);
 }
+
+export function UpdateTodoTitle(arg1, arg2) {
+  return window['go']['main']['App']['UpdateTodoTitle'](arg1, arg2);
+}
